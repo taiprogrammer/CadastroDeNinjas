@@ -1,10 +1,12 @@
-package com.example.CadastroDeNinjas;
+package com.example.CadastroDeNinjas.Ninjas;
 
+import com.example.CadastroDeNinjas.Missoes.MissaoModel;
 import jakarta.persistence.*;
-import org.springframework.context.annotation.Primary;
+
+import java.util.List;
 
 @Entity
-@Table(name = "ninjas")
+@Table(name = "ninja")
 public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +17,9 @@ public class NinjaModel {
     private String email;
     @Column(name = "idade", nullable = false)
     private int idade;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "ninja_id")
+    private List<MissaoModel> missoes;
 
     public NinjaModel() {
     }
