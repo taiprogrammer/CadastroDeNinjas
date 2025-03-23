@@ -9,11 +9,11 @@ public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column
+    @Column(name = "nome", nullable = false)
     private String nome;
-    @Column
+    @Column(name = "email", nullable = false)
     private String email;
-    @Column
+    @Column(name = "idade", nullable = false)
     private int idade;
 
     public NinjaModel() {
