@@ -17,9 +17,9 @@ public class NinjaModel {
     private String email;
     @Column(name = "idade", nullable = false)
     private int idade;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ninja_id")
-    private List<MissaoModel> missoes;
+    @ManyToOne
+    @JoinColumn(name = "missao_id")
+    private MissaoModel missao;
 
     public NinjaModel() {
     }

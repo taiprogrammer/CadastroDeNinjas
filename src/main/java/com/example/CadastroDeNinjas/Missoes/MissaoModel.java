@@ -3,6 +3,9 @@ package com.example.CadastroDeNinjas.Missoes;
 import com.example.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "missao")
 public class MissaoModel {
@@ -13,14 +16,14 @@ public class MissaoModel {
     private String nome;
     @Column(name = "dificuldade", nullable = false)
     private Dificuldade dificuldade;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ninja_id")
-    private NinjaModel ninja;
+    @OneToMany(mappedBy = "missao")
+//    @JoinColumn(name = "ninja_id")
+    private List<NinjaModel> ninja;
 
     public MissaoModel() {
     }
 
-    public MissaoModel(Long id, String nome, Dificuldade dificuldade, NinjaModel ninja) {
+    public MissaoModel(Long id, String nome, Dificuldade dificuldade, List<NinjaModel> ninja) {
         this.id = id;
         this.nome = nome;
         this.dificuldade = dificuldade;
@@ -51,11 +54,11 @@ public class MissaoModel {
         this.dificuldade = dificuldade;
     }
 
-    public NinjaModel getNinja() {
+    public List<NinjaModel> getNinja() {
         return ninja;
     }
 
-    public void setNinja(NinjaModel ninja) {
+    public void setNinja(List<NinjaModel> ninja) {
         this.ninja = ninja;
     }
 }
