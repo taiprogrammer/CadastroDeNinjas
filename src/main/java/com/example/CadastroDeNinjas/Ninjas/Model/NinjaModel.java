@@ -1,4 +1,4 @@
-package com.example.CadastroDeNinjas.Ninjas.Models;
+package com.example.CadastroDeNinjas.Ninjas.Model;
 
 import com.example.CadastroDeNinjas.Missoes.Model.MissaoModel;
 import jakarta.persistence.*;

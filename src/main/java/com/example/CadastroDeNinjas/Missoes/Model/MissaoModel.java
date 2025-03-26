@@ -1,7 +1,7 @@
 package com.example.CadastroDeNinjas.Missoes.Model;
 
 import com.example.CadastroDeNinjas.Utils.Dificuldade;
-import com.example.CadastroDeNinjas.Ninjas.Models.NinjaModel;
+import com.example.CadastroDeNinjas.Ninjas.Model.NinjaModel;
 import jakarta.persistence.*;
 import lombok.*;
 
