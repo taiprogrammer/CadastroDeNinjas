@@ -1,10 +1,8 @@
-package com.example.CadastroDeNinjas.Ninjas;
+package com.example.CadastroDeNinjas.Ninjas.Models;
 
-import com.example.CadastroDeNinjas.Missoes.MissaoModel;
+import com.example.CadastroDeNinjas.Missoes.Model.MissaoModel;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.List;
 
 @Entity
 @Table(name = "ninja")

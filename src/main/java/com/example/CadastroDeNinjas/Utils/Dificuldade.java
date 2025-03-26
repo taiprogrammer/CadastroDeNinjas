@@ -1,4 +1,4 @@
-package com.example.CadastroDeNinjas.Missoes;
+package com.example.CadastroDeNinjas.Utils;
 
 public enum Dificuldade {
     D("Baixo", 2),

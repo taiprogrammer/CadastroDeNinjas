@@ -1,10 +1,10 @@
-package com.example.CadastroDeNinjas.Missoes;
+package com.example.CadastroDeNinjas.Missoes.Model;
 
-import com.example.CadastroDeNinjas.Ninjas.NinjaModel;
+import com.example.CadastroDeNinjas.Utils.Dificuldade;
+import com.example.CadastroDeNinjas.Ninjas.Models.NinjaModel;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
