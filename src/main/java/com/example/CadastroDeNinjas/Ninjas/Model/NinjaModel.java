@@ -20,6 +20,9 @@ public class NinjaModel {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
+    @Column(name = "img_url")
+    private String imgUrl;
+
     @Column(name = "idade", nullable = false)
     private int idade;
 
